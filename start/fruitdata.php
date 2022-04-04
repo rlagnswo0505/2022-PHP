@@ -27,6 +27,10 @@
         </tr>
 
     <?php
+    /* php for each 문
+        value만 가져오는 경우 : foreach($array as $value)
+        key와 value를 가져오는 경우 : froeach($array as $key => value)
+    */
     foreach($fruit as $name => $price){
         if($price <= $low) {
             print "<tr><td>" . $name . "</td><td>" . $price . "</td></tr>";
