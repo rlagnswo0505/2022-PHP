@@ -7,7 +7,7 @@
     // $mon 값이 12, 1, 2 사이면 "겨울" 출력
     // 상관없는 값이면 계절없음
 
-
+    // 1 ~ 15 랜덤 값이 들어간다.
     $mon = rand(1,15);
     switch($mon) {
         case 12: case 2: case 1:
@@ -24,5 +24,3 @@
             break;
             default: print"${mon}월은 계절 없음";
     }
-    
-?>
