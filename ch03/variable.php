@@ -4,7 +4,7 @@
     multi-line comment
 */
 
-$age = 21; // -은 대입연산자 . . 은 문자열 변환 합치기
+$age = 21; // -은 대입연산자 . . 은 문자열 변환 합치기 문자열 변환
 print "<div>" . $age . "</div>";
 
 $name;

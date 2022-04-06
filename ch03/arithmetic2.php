@@ -12,11 +12,11 @@
 
 
     $n2 = 10;
-    // 읽기 먼저
+    // 읽기 먼저 (대입을 하고 난 후 증가)
     $sum = 10 + $n2++;
     print "$sum <br>";
     print "$n2 <br>";
-    // 쓰기 먼저
+    // 쓰기 먼저 (대입을 하기 전 증가)
     $sum = 10 + ++$n2;
     print "$sum <br>";
     print "$n2 <br>";
@@ -49,4 +49,3 @@
 
     $result = $oprd1 > $oprd2;
     print "$oprd1 > $oprd2 : $result <br>";
-?>
