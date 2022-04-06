@@ -46,7 +46,7 @@ php.ini로 바꾼 후 편집열기
 
 -세미콜론 풀어주기
 ;extension_dir = "./"
-extension_dir = "c:/php8/txt" 로 수정
+extension_dir = "c:/php8/ext" 로 수정
 
 -C:\Apache24\conf
 httpd 메모장 열기
