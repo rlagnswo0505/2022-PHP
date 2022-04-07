@@ -27,6 +27,20 @@
         ?>
         입니다.
     </div>
+    <div>
+        <form method="" action="">
+            <input type="number" name="num" id="num">
+            <input type="submit" value="입력">
+        </form>
+    </div>
+    <div>
+        <div class="answer">
+
+        </div>
+    </div>
+    <script>
+        const num = Document.querySelector("#num").value;
+    </script>
 </body>
 
 </html>

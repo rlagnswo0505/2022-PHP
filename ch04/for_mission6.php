@@ -29,7 +29,7 @@
             for ($z = 2; $z < 10; $z++) {
                 $result = $z * $i;
                 if ($result < 10) {
-                    print "-";
+                    print "&nbsp;";
                 }
                 print "$z * $i = ${result} $space";
             }

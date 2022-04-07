@@ -5,9 +5,10 @@
         출력 : [1, 2, 3, 4, 5, 6. 7]
     
  */
+$end_val = 8;
 print "[";
-for ($i = 1; $i < 8; $i++) {
-    if ($i === 7) {
+for ($i = 1; $i < $end_val; $i++) {
+    if ($i === $end_val) {
         print $i . "]";
     } else {
         print $i . ",";
@@ -15,8 +16,8 @@ for ($i = 1; $i < 8; $i++) {
 }
 echo "<br> ==================== <br>";
 
+// 매직넘버 (변수명에서 무슨 역할을 하는지 써주는게 좋다)
 
-$end_val = 8;
 echo "[";
 for ($i = 1; $i <= $end_val; $i++) {
     echo $i;

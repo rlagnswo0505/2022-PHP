@@ -16,24 +16,24 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-    print "가격이" . $low . "원 이하인 과일의 목록입니다.";
+    <?php       
+    print "         가격이" . $low . "원 이하인 과일의 목록입니다.";
     ?>
-    <!-- print 안에 (") 를 사용하고 싶다면 \로 감싸줘야 한다.-->
+    <!-- print 안에 (") 를 사       용하고 싶다면 \로 감싸줘야 한다.-->
     <table border="1">
-        <tr>
+                    <tr>
             <th>이름</th>
             <th>가격</th>
-        </tr>
+        <           /tr>
 
     <?php
     /* php for each 문
-        value만 가져오는 경우 : foreach($array as $value)
-        key와 value를 가져오는 경우 : froeach($array as $key => value)
+                value만 가져오는 경우 : foreach($array as $value)
+                key와 value를 가져오는 경우 : froeach($array as $key => value)
     */
-    foreach($fruit as $name => $price){
+    foreach($fruit as $n        ame => $price){
         if($price <= $low) {
-            print "<tr><td>" . $name . "</td><td>" . $price . "</td></tr>";
+            print "<t   r><td>" . $name . "</td><td>" . $price . "</td></t>";
         }
     }
     ?>
