@@ -72,7 +72,7 @@ AddType application/x-httpd-php .php .html
 
 ===== https://programming-workspace.tistory.com/19 ======
 
-C:\php8에서 php8.ini 편집
+C:\php8에서 php.ini 편집
 
 ;(세미콜론)들 빼주기
 extension=curl
