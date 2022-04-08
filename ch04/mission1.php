@@ -36,7 +36,7 @@ if (100 < $score) {
     print "잘못된 값";
 }
 */
-
+// floor 내림 ceil 올림 round 반올림
 if ($score > 100 || $score < 0) {
     print "잘못된 값";
 } else {

@@ -31,7 +31,7 @@
                 value만 가져오는 경우 : foreach($array as $value)
                 key와 value를 가져오는 경우 : froeach($array as $key => value)
     */
-    foreach($fruit as $n        ame => $price){
+    foreach($fruit as $name => $price){
         if($price <= $low) {
             print "<t   r><td>" . $name . "</td><td>" . $price . "</td></t>";
         }
