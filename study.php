@@ -39,15 +39,7 @@
         <?php
         $space = "&nbsp;&nbsp;"; // 빈공간 만들어주기
         $coin = "<i class=\"fa-solid fa-coins\"></i>"; // 돈
-        for ($i = 0; $i < $num; $i++) {
-            for ($z = $num; $z > $i; $z--) {
-                print $space;
-            }
-            for ($z = 0; $z <= $i; $z++) {
-                print $coin;
-            }
-            print "<br>";
-        }
+       
         ?>
     </div>
 </body>
