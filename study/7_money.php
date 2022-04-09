@@ -20,7 +20,8 @@
     $num = $_POST['num'];
     ?>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        돈쌓기 피라미드 줄의 개수를 입력해주세요.(3 ~ 10)
+        <h1> 돈쌓기 피라미드</h1>
+        줄의 개수를 입력해주세요.(3 ~ 10)
         <input type="number" name="num" min="3" max="10" value="<?php echo $num; ?>">
         <input type="submit" value="입력">
     </form>
