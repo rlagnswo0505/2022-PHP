@@ -30,24 +30,3 @@ print "학생별 평균 : <br>";
 for ($i = 0; $i < count($names); $i++) {
     print "$names[$i] : $avg_scores[$i] <br>";
 }
-
-
-$subject = array("국어", "영어", "수학");
-$subject_scores = array(0, 0, 0);
-$subject_avg = array(0, 0, 0);
-for ($줄 = 0; $줄 < count($score); $줄++) {
-    for ($칸 = 0; $칸 < count($score[$줄]); $칸++) {
-        $subject_scores[$줄] += $score[$칸][$i줄];
-    }
-}
-print "과목별 총점 : <br>";
-for ($i = 0; $i < count($subject); $i++) {
-    print "$subject[$i] : $subject_scores[$i] <br>";
-}
-for ($i = 0; $i < count($subject); $i++) {
-    $subject_avg[$i] = $subject_scores[$i] / 3;
-}
-print "과목별 평균 : <br>";
-for ($i = 0; $i < count($subject); $i++) {
-    print "$subject[$i] : $subject_avg[$i] <br>";
-}
