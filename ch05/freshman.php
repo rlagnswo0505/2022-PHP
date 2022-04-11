@@ -1,4 +1,5 @@
 <?php
+// 순서가 없는 시퀀스 배열
 $freshman = array(
     "David" => "Computer",
     "Alice" => "Math",
