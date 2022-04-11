@@ -35,7 +35,10 @@ $array = array(
         </tr>
         <?php
         foreach ($array as $key => $val) {
-            print "<tr><td> $key </td> <td> $val </td></tr>";
+            print "<tr>";
+            print "<td> $key </td>";
+            print "<td> $val </td>";
+            print "</tr>";
         }
         ?>
     </table>
