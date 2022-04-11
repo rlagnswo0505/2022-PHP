@@ -4,7 +4,7 @@ $freshman = array(
     "Alice" => "Math",
     "Elsa" => "Physics",
     "Bob" => "Music",
-    "Chris" => "Rlectronics"
+    "Chris" => "electronics"
 );
 
 print_r($freshman);
