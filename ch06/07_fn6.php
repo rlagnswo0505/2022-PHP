@@ -19,6 +19,19 @@ function print_star($star)
     }
 }
 
+/*
+    $star = 3
+    * * *
+    * * *
+    * * * 
+
+    $star = 5
+    * * * * *
+    * * * * *
+    * * * * *
+    * * * * *
+    * * * * *
+*/
 function print_star_line($star)
 {
     for ($z = 0; $z < $star; $z++) {
