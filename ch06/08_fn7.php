@@ -16,28 +16,41 @@ if ($season) {
 // 나머지 값은 : 빈칸
 function get_season($mon)
 {
-    $season = "";
     switch ($mon) {
         case 12:
         case 2:
         case 1:
-            $season = "겨울";
-            break;
+            return "겨울";
         case 11:
         case 10:
         case 9:
-            $season = "가을";
-            break;
+            return "가을";
         case 8:
         case 7:
         case 6:
-            $season = "여름";
-            break;
+            return "여름";
         case 5:
         case 4:
         case 3:
-            $season = "봄";
-            break;
+            return "봄";
+        default:
+            return "";
     }
-    return $season;
 }
+// function get_season($mon)
+// {
+//     if ($mon < 1 || $mon > 12) {
+//         return "";
+//     }
+//     if ($mon < 3 || $mon === 12) {
+//         return "겨울";
+//     }
+//     if ($mon < 6) {
+//         return "봄";
+//     }
+//     if ($mon < 9) {
+//         return "여름";
+//     } else {
+//         return "가을";
+//     }
+// };
