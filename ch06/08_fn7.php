@@ -21,19 +21,19 @@ function get_season($mon)
         case 2:
         case 1:
             // return 하면 이후 구현부는 상관없이 바로 값을 리턴
-            return "겨울";
+            return "겨울 ⛄";
         case 11:
         case 10:
         case 9:
-            return "가을";
+            return "가을 🍂";
         case 8:
         case 7:
         case 6:
-            return "여름";
+            return "여름 🔥";
         case 5:
         case 4:
         case 3:
-            return "봄";
+            return "봄 🌼";
         default:
             return "";
     }
