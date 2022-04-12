@@ -9,9 +9,10 @@ print_star_triangle($star);
 function print_star_triangle($star)
 {
     for ($i = 1; $i <= $star; $i++) {
-        for ($z = 0; $z < $i; $z++) {
-            print "* ";
-        }
+        // for ($z = 0; $z < $i; $z++) {
+        //     print "* ";
+        // }
+        print_star($i);
         print "<br>";
     }
 }
