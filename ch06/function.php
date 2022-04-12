@@ -12,12 +12,15 @@ print "sum : " . sum(30, 40) . "<br>";
 minus(35, 12);
 minus(10, 2);
 
+// 선언부
 function sum($n1, $n2) //$n1, $n2 = 파라미터(매개변수)라고 부름
 {
+    // 구현부
     return $n1 + $n2;
 }
 
 function minus($n1, $n2)
 {
     print "minus : " . ($n1 - $n2) . "<br>";
+    // return; 입력하지 않아도 자동으로 들어간다.
 }
