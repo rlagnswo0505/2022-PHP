@@ -9,8 +9,10 @@ $result = sum(10, 20);
 print "sum : $result <br>";
 print "sum : " . sum(30, 40) . "<br>";
 
-minus(35, 12);
+$r = minus(35, 12);
 minus(10, 2);
+
+print "r : " . $r . "<br>";
 
 // 선언부
 function sum($n1, $n2) //$n1, $n2 = 파라미터(매개변수)라고 부름
@@ -19,6 +21,7 @@ function sum($n1, $n2) //$n1, $n2 = 파라미터(매개변수)라고 부름
     return $n1 + $n2;
 }
 
+// 보이드 함수 외롭게 써야한다.
 function minus($n1, $n2)
 {
     print "minus : " . ($n1 - $n2) . "<br>";
