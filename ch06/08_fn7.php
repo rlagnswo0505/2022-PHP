@@ -20,6 +20,7 @@ function get_season($mon)
         case 12:
         case 2:
         case 1:
+            // return 하면 이후 구현부는 상관없이 바로 값을 리턴
             return "겨울";
         case 11:
         case 10:
