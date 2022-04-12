@@ -3,7 +3,19 @@ $star = rand(3, 10);
 print "star = $star <br>";
 
 // print_star($star);
-print_star_line($star);
+// print_star_line($star);
+print_star_triangle($star);
+
+function print_star_triangle($star)
+{
+    for ($i = 1; $i <= $star; $i++) {
+        for ($z = 0; $z < $i; $z++) {
+            print "* ";
+        }
+        print "<br>";
+    }
+}
+
 /*
     $star = 3
     ***
