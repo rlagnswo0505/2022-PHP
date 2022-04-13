@@ -7,9 +7,10 @@ ex) 5! = 1 * 2 * 3 * 4 * 5)
 로 출력 해야함
 5! = 120입니다.
 */
-$fac_num = rand(1, 20);
+$fac_num = rand(1, 7);
 $mul = 1;
 for ($i = 1; $i <= $fac_num; $i++) {
     $mul *= $i;
 }
+// 1 * 2 * 3
 print "${fac_num}! = ${mul} 입니다.";

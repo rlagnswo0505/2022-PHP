@@ -7,7 +7,7 @@
 $three_sum = 0;
 $five_sum = 0;
 for ($i = 1; $i <= 50; $i++) {
-    if ($i % 3 == 0) {
+    if ($i % 3 === 0) {
         $three_sum += $i;
     }
     if ($i % 5 === 0) {
