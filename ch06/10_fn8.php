@@ -29,14 +29,15 @@
 
         function print_table($val)
         {
-            $num = 0;
+            $num = 1;
             for ($i = 0; $i < $val; $i++) {
                 print "<tr>";
                 for ($z = 0; $z < $val; $z++) {
-                    $num++;
-                    print "<td>$num</td>";
+                    print "<td>";
+                    print $num++;
+                    print "</td>";
                 }
-                print "</td>";
+                print "</tr>";
             }
         }
         ?>
