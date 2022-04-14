@@ -10,7 +10,7 @@ print "sum : $result <br>";
 print "sum : " . sum(30, 40) . "<br>";
 
 $r = minus(35, 12);
-minus(10, 2);
+minus(10, 2); //함수를 호출할 때 입력하는 값은 아규먼트(인자)라고 부른다.
 
 print "r : " . $r . "<br>";
 
