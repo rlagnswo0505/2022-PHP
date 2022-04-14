@@ -11,6 +11,10 @@
 <body>
     <h1>글쓰기</h1>
     <a href="list.php"><button>리스트</button> </a>
+    <!-- 
+        쿼리스트링
+        <form action="write_proc.php?i_board=10" method="get">
+     -->
     <form action="write_proc.php" method="post">
         <div><input type="text" name="title" placeholder="제목"></div>
         <div><textarea name="ctnt" placeholder="내용"></textarea></div>
