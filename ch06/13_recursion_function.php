@@ -21,3 +21,16 @@ function factorial($num)
     }
     return $result;
 }
+
+// 절대값 만들기
+$num = my_abs(-3);
+function my_abs($val)
+{
+    // if ($val < 0) {
+    //     return -$val;
+    // }
+    // return $val;
+    return $val < 0 ? -$val : $val;
+}
+print "my_abs(-3) : " . my_abs(-3) . "<br>";
+print "my_abs(3) : " . my_abs(3) . "<br>";
