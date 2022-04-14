@@ -13,5 +13,3 @@ function plus_array(&$arr, $val)
 $arr = [10, 20, 30, 40, 50];
 plus_array($arr, 10);
 print_r($arr);
-
-print "dfjasdasdas";
