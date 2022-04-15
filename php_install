@@ -20,14 +20,19 @@ ServerRoot "${SRVROOT}"
 #ServerName www.example.com:80
 ServerName localhost:80 
 
+C:\Apache24\bin 안에
+ApacheMonitor 관리자 권한으로 실행
+서버시작
+
+-------- 위에 방법으로 하면 필요 없음---------
 - cmd창 관리자 권한 열기
-/cd
+cd.. 반복
 root로 접근
 cd Apache24/bin
 로 접근 한 후 
 httpd -k install
 httpd -k start
-
+--------------------------------------------
 인터넷 창에 localhost를 쳤을때
 it works! 라고 뜨면 성공
 
