@@ -1,10 +1,12 @@
 <?php
 include_once "db.php";
-
+// CRUD 에서 READ만 배열로 넘어오고 나머지는 INT로 들어온다.
 $conn = get_conn();
+// 필요한 정보만 가져와야 쓸데없는 데이터 낭비가 없다.
 $sql = "SELECT i_board, title, create_at FROM t_board ORDER BY i_board DESC";
 $result = mysqli_query($conn, $sql);
 mysqli_close($conn);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -14,7 +14,7 @@
     <!-- 
         쿼리스트링
         <form action="write_proc.php?i_board=10" method="get">
-     -->
+    -->
     <form action="write_proc.php" method="post">
         <div><input type="text" name="title" placeholder="제목"></div>
         <div><textarea name="ctnt" placeholder="내용"></textarea></div>
