@@ -9,12 +9,12 @@
 </head>
 
 <body>
-    <h1>글쓰기</h1>;
+    <h1>글쓰기</h1>
     <a href="list.php"><button>리스트</button></a>
     <form action="write_proc.php" method="post">
-        <div><input type="text" name="title" id="" placeholder="제목"></div>;
+        <div><input type="text" name="title" id="" placeholder="제목"></div>
         <div><textarea name="ctnt" placeholder="내용" id="" cols="30" rows="10"></textarea></div>
-        <input type="submit" value="글등록">;
+        <input type="submit" value="글등록">
         <input type="reset" value="초기화">
     </form>
 </body>
