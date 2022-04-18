@@ -24,12 +24,12 @@ if ($row = mysqli_fetch_assoc($result)) {
 </head>
 
 <body>
-    <h1>글수정</h1>;
+    <h1>글수정</h1>
     <a href="detail.php?i_board=<?= $i_board ?>"><button>글로 이동</button></a>
     <form action="mod_proc.php" method="post">
         <input type="hidden" name="i_board" value="<?= $i_board ?>">
-        <div><input type="text" name="title" placeholder="제목" id="" value="<?= $title ?>"></div>
-        <div><textarea name="ctnt" placeholder="내용" id="" cols="30" rows="10"></textarea><?= $ctnt ?></div>
+        <div><input type="text" name="title" id="" placeholder="제목" value="<?= $title ?>"></div>
+        <div><textarea name="ctnt" placeholder="내용" id="" cols="30" rows="10"><?= $ctnt ?></textarea></div>
         <input type="submit" value="글수정">
         <input type="reset" value="초기화">
     </form>
