@@ -1,8 +1,6 @@
 <?php
 include_once 'db.php';
-
 $i_board = $_GET['i_board'];
-print $i_board;
 
 $conn = get_conn();
 $sql = "SELECT * FROM t_board WHERE i_board=$i_board";
@@ -12,8 +10,8 @@ mysqli_close($conn);
 if ($row = mysqli_fetch_assoc($result)) {
     $title = $row['title'];
     $created_at = $row['created_at'];
-    $ctnt = $row['ctnt'];
     $mod_at = $row['mod_at'];
+    $ctnt = $row['ctnt'];
 }
 ?>
 <!DOCTYPE html>
@@ -32,11 +30,12 @@ if ($row = mysqli_fetch_assoc($result)) {
     <a href="mod.php?i_board=<?= $i_board ?>"><button>수정</button></a>
     <a href="del_proc.php?i_board=<?= $i_board ?>"><button>삭제</button></a>
     <div>제목 : <?= $title ?></div>
-    <div>작성일자 : <?= $created_at ?></div>
+    <div>작성일시 : <?= $created_at ?></div>
     <?php
     if ($mod_at !== $created_at) {
-        print "<div>수정일자 : $mod_at</div>";
-    } ?>
+        print "<div>수정일시 : $mod_at</div>";
+    }
+    ?>
     <div>내용 : <?= $ctnt ?></div>
 </body>
 
