@@ -10,75 +10,76 @@
 </head>
 
 <body>
-    <form action="insert_proc.php" method="post">
-        <ul>
-            <li>
-                <label>아이디<br>
-                    <input type="text" name="user_id" placeholder="@naver.com">
-                </label>
-            </li>
-            <li>
-                <label>비밀번호<br>
-                    <input type="password" name="user_password">
-                </label>
-            </li>
-            <li>
-                <label>비밀번호 재확인<br>
-                    <input type="password">
-                </label>
-            </li>
-            <li>
-                <label>이름<br>
-                    <input type="text" name="user_name">
-                </label>
-            </li>
-            <li>
-                <div>
-                    <label>생년월일<br>
-                        <input type="text" name="bir_yy" placeholder="년(4자)">
-                    </label>
-                    <select name="bir_mm">
-                        <option value="월">월</option>
-                        <option value="1월">1월</option>
-                        <option value="2월">2월</option>
-                        <option value="3월">3월</option>
-                        <option value="4월">4월</option>
-                        <option value="5월">5월</option>
-                        <option value="6월">6월</option>
-                        <option value="7월">7월</option>
-                        <option value="8월">8월</option>
-                        <option value="9월">9월</option>
-                        <option value="10월">10월</option>
-                        <option value="11월">11월</option>
-                        <option value="12월">12월</option>
-                    </select>
-                    <input type="text" name="bir_dd" placeholder="일">
-                </div>
-            </li>
-            <li>
-                <label> 성별 <br>
-                    <select name="gender">
-                        <option value="성별">성별</option>
-                        <option value="남자">남자</option>
-                        <option value="여자">여자</option>
-                    </select>
-                </label>
-            </li>
-            <li>
-                <label>본인 확인 이메일 <span>(선택)</span> <br>
-                    <input type="text" name="user_email" placeholder="선택입력">
-                </label>
-            </li>
-            <li><label> 휴대전화 <br></label>
-                <input type="text" value="대한민국 +82" readonly> <br>
-                <input type="text" name="phoneno" placeholder="전화번호 입력">
-                <button>인증번호 받기</button><br>
-                <input type="text" placeholder="인증번호 입력하세요">
-            </li>
-        </ul>
-        <input type="submit" value="가입하기">
-    </form>
+    <main>
+        <div class="main_box">
+            <a href="index.php" class="main_logo">NAVER</a>
+            <div class="main_box-sign">
+                <form action="sign_up_proc.php" method="post">
+                    <div>
+                        <label for="id">아이디</label>
+                        <input type="text" name="user_id" id="id" placeholder="@naver.com">
+                    </div>
+                    <div>
+                        <label for="pw">비밀번호</label>
+                        <input type="password" name="user_password" id="pw">
+                    </div>
+                    <div>
+                        <label for="rpw">비밀번호 재확인</label>
+                        <input type="password" name="" id="rpw">
+                    </div>
+                    <div>
+                        <label for="name">이름</label>
+                        <input type="text" name="user_name" id="name">
+                    </div>
+                    <div>
+                        <label for="year">생년월일</label>
+                        <div class="birth_box">
+                            <input type="text" name="bir_yy" id="year" placeholder="년(4자리)">
+                            <select name="bir_mm" id="month">
+                                <option>월</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <input type="number" name="bir_dd" placeholder="일" id="day" min="1" max="31">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="gender">성별</label>
+                        <select name="gender" id="gender">
+                            <option value="">성별</option>
+                            <option value="m">남자</option>
+                            <option value="f">여자</option>
+                            <option value="">선택 안함</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="email">본인 확인 이메일</label>
+                        <input type="text" name="user_email" id="email">
+                    </div>
+                    <div>
+                        <label for="phone">휴대전화</label>
+                        <input type="text" name="phoneno" id="phone">
+                    </div>
+                    <div>
+                        <input type="submit" value="가입하기">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
 
+    </footer>
 </body>
 
 </html>

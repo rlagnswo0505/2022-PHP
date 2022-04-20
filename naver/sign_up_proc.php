@@ -18,5 +18,6 @@ gender, user_email,phoneno)
 VALUES
 ('$user_id','$user_password','$user_name','$bir_yy','$bir_mm','$bir_dd','$gender ','$user_email','$phoneno')";
 
-mysqli_query($conn, $sql);
-mysqli_close($conn); //연결 닫는거 !!!
+$result = mysqli_query($conn, $sql);
+mysqli_close($conn);
+header("location: index.php");
