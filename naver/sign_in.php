@@ -25,9 +25,9 @@
                 </a>
             </div>
             <div class="main-login__box">
-                <form action="login_proc.php" method="post">
+                <form action="sign_in_proc.php" method="post">
                     <input class="login-input" type="text" name="user_id" id="" placeholder="아이디">
-                    <input class="login-input" type="password" placeholder="비밀번호" name="user_pass" id="">
+                    <input class="login-input" type="password" placeholder="비밀번호" name="user_password" id="">
                     <input type="submit" value="로그인">
                 </form>
             </div>
