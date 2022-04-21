@@ -61,3 +61,6 @@ main .main_box-sign form input[type="submit"] {
     font-size: 1.2rem;
     margin-top: 10px;
 }
+.red {
+    color: red;
+}
