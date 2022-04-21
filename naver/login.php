@@ -55,6 +55,14 @@ if (!is_null($user_id)) {
                 <form action="login.php" method="post">
                     <input class="login-input" type="text" name="user_id" id="" placeholder="아이디">
                     <input class="login-input" type="password" placeholder="비밀번호" name="user_password" id="">
+                    <?php
+                    if ($wu == 1) {
+                        print "<div class='red'>존재하지 않는 아이디입니다.</div>";
+                    }
+                    if ($wp == 1) {
+                        print "<div class='red'>비밀번호가 틀렸습니다.</div>";
+                    }
+                    ?>
                     <input type="submit" value="로그인">
                 </form>
             </div>
@@ -66,14 +74,7 @@ if (!is_null($user_id)) {
             <div>
                 <a href="#">아이디 찾기</a>
             </div>
-            <?php
-            if ($wu == 1) {
-                print "<div class='red'>존재하지 않는 아이디입니다.</div>";
-            }
-            if ($wp == 1) {
-                print "<div class='red'>비밀번호가 틀렸습니다.</div>";
-            }
-            ?>
+
             <div>
                 <a href="sign_up.php">회원가입</a>
             </div>
