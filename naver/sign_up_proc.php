@@ -3,6 +3,7 @@ include_once "db.php";
 
 $user_id = $_POST["user_id"];
 $user_password = $_POST["user_password"];
+$check_password = $_POST["check_password"];
 $user_name = $_POST["user_name"];
 $bir_yy = $_POST["bir_yy"];
 $bir_mm = $_POST["bir_mm"];
