@@ -5,18 +5,18 @@ $user_id = $_POST['user_id'];
 $user_password = $_POST['user_password'];
 if (!is_null($user_id)) {
     $conn = get_conn();
-    $sql = "SELECT password FROM t_naver WHERE user_id='$user_id'";
+    $sql = "SELECT user_password FROM t_naver WHERE user_id='$user_id'";
     $result = mysqli_query($conn, $sql);
     foreach ($result as $row) {
         $user_password_e = $row['user_password'];
     }
-    if (is_null($password_e)) {
+    if (is_null($user_password_e)) {
         $wu = 1;
     } else {
         if ($user_password == $user_password_e) {
             session_start();
             $_SESSION['user_id'] = $user_id;
-            header("location: sign_in_ok.php");
+            header("location: login_ok.php");
         } else {
             $wp = 1;
         }
