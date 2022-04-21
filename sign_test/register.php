@@ -4,19 +4,16 @@ include_once 'db.php';
 $username = $_POST['username'];
 $password = $_POST['password'];
 $check_password = $_POST['check_password'];
-
 if (!is_null($username)) {
     $conn = get_conn();
-    $sql = "SELECT username FROM t_member WHERE username=$username";
+    $sql = "SELECT username FROM t_member WHERE username='$username'";
     $result = mysqli_query($conn, $sql);
     foreach ($result as $row) {
         $username_e = $row['username'];
     }
     if ($username == $username_e) {
-        // db에 username이 이미 들어가있는지 확인
         $wu = 1;
     } else if ($password != $check_password) {
-        // password 재확인시 불일치 하는지 확인
         $wp = 1;
     } else {
         $sql_add_user = "INSERT INTO t_member (username,password) VALUES ('$username','$password')";

@@ -40,7 +40,7 @@
                 <a href="#">아이디 찾기</a>
             </div>
             <div>
-                <a href="sign_up.html">회원가입</a>
+                <a href="sign_up.php">회원가입</a>
             </div>
         </div>
     </div>

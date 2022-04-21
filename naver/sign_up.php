@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
     <link rel="stylesheet" href="sign_up.css">
+    <script src="https://kit.fontawesome.com/8eb4f0837a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -87,7 +88,6 @@
                 return password = "";;
             }
         }
-
     </script>
 </body>
 
