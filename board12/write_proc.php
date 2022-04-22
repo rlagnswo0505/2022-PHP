@@ -9,4 +9,5 @@ $sql = "INSERT INTO t_board (title,ctnt) VALUES ('$title','$ctnt')";
 
 $result = mysqli_query($conn, $sql);
 mysqli_close($conn);
+
 header("location: list.php");
