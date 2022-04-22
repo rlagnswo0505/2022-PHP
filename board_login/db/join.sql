@@ -1,7 +1,7 @@
 DROP TABLE t_board;
 DROP TABLE t_user;
 
-ALTER TABLE t_user CHANGE upw upw VARCHAR(30);
+ALTER TABLE t_user CHANGE upw upw VARCHAR(0);
 
 CREATE TABLE t_user(
 	i_user INT UNSIGNED AUTO_INCREMENT PRIMARY key,
