@@ -13,7 +13,6 @@ $param = [
     "nm" => $nm,
     "gender" => $gender
 ];
-
 $result = user_join($param);
 
 print "result : $result <br>";
