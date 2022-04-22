@@ -3,6 +3,7 @@ include_once 'db.php';
 $i_board = $_GET['i_board'];
 
 $conn = get_conn();
+// where 절에 pk가 들어가 있기 때문에 select문에 1개또는 0개만 들어온다.
 $sql = "SELECT * FROM t_board WHERE i_board=$i_board";
 
 $result = mysqli_query($conn, $sql);
