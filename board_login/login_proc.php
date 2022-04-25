@@ -5,7 +5,12 @@
 $uid = $_POST['uid'];
 $upw = $_POST['upw'];
 
+$param = [
+    "uid" => $uid
+];
 
+$result = sel_user($param);
 
+print "i_user : $result['i_user'], <br>";
 print "uid = $uid <br>";
 print "upw = $upw <br>";
