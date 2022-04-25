@@ -26,7 +26,7 @@ function sel_user($param)
     $uid = $param['uid'];
 
     $conn = get_conn();
-    $sql = "SELECT i_user, uid, upw, nm, gender FROM t_user WHERE uid=$uid";
+    $sql = "SELECT i_user, uid, upw, nm, gender FROM t_user WHERE uid='$uid'";
 
     $result = mysqli_query($conn, $sql);
     mysqli_close($conn);
