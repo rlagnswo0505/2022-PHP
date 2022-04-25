@@ -1,4 +1,3 @@
-
 <?php
 include_once "db/db_user.php";
 //login.php 에서 넘어오는 값을 적절한 변수에 담는다.
