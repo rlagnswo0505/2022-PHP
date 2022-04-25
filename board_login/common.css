@@ -10,6 +10,13 @@ body {
 
 #container {
     display: grid;
-    grid-template-columns: 100px, 1fr;
+    grid-template-rows: 100px, 1fr;
     min-height: 100vh;
+}
+#container > header {
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
 }

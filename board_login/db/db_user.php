@@ -9,8 +9,7 @@ function ins_user($param)
     $gender = $param["gender"];
 
     $conn = get_conn();
-    $sql =
-        "INSERT INTO t_user 
+    $sql = "INSERT INTO t_user 
     (uid, upw, nm, gender) 
     VALUES
     ('$uid', '$upw', '$nm', $gender)

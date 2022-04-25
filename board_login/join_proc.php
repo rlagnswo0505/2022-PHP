@@ -14,7 +14,7 @@ $param = [
     "gender" => $gender
 ];
 
-$result = user_join($param);
+$result = ins_user($param);
 
 echo "result : ", $result, "<br>";
 echo "udi : ", $uid, "<br>";
