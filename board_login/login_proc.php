@@ -25,6 +25,8 @@ echo "pw : ", $result['upw'], "<br>";
 //비밀번호가 다르면 "login.php로 주소 이동"
 
 if ($result['upw'] === $upw) {
+    session_start();
+    $_SESSION["login_user"] = $result;
     header("location: list.php");
 } else {
     header("location: login.php");
