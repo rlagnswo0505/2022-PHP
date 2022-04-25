@@ -21,7 +21,7 @@ if (isset($_SESSION["login_user"])) {
 <body>
     <?php
     if ($nm !== "") {
-        print "${nm} 님 환영합니다.";
+        print "<div>${nm}님 환영합니다. </div>";
     }
     ?>
     <h1>리스트</h1>
