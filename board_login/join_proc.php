@@ -16,7 +16,7 @@ $param = [
 
 $result = user_join($param);
 
-echo "result : ", $result, "<br>";
+echo "result : ", $result, "<br>"; // 1또는 0 (true or false)
 echo "udi : ", $uid, "<br>";
 echo "upw : ", $upw, "<br>";
 echo "confirm_upw : ", $confirm_upw, "<br>";
