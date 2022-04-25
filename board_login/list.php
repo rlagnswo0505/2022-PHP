@@ -31,11 +31,6 @@ if (isset($_SESSION["login_user"])) {
                 <a href="list.php">리스트</a>
                 <a href="write.php">글쓰기</a>
                 <?php
-                // if ($nm !== "") {
-                //     print "<a href='logout.php'>로그아웃</a>";
-                // } else {
-                //     print "<a href='login.php'>로그인</a>";
-                // }
                 $nm !== "" ? print "<a href='logout.php'>로그아웃</a>" : print "<a href='login.php'>로그인</a>";
                 ?>
             </div>
