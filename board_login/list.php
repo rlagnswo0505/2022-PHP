@@ -19,7 +19,11 @@ if (isset($_SESSION["login_user"])) {
 </head>
 
 <body>
-    <div><?= $nm ?>님 환영합니다.</div>
+    <?php
+    if ($nm !== "") {
+        print "${nm} 님 환영합니다.";
+    }
+    ?>
     <h1>리스트</h1>
 
 </body>
