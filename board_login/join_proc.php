@@ -14,7 +14,7 @@ $param = [
     "gender" => $gender
 ];
 
-$result = user_join($param);
+$result = ins_user($param);
 
 echo "result : ", $result, "<br>"; // 1또는 0 (true or false)
 echo "udi : ", $uid, "<br>";
