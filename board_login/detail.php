@@ -19,7 +19,9 @@ if ($row = mysqli_fetch_assoc($item)) {
     $updated_at = $row['updated_at'];
 }
 session_start();
-$login_user = $_SESSION["login_user"];
+if (isset($_SESSION["login_user"])) {
+    $login_user = $_SESSION["login_user"];
+}
 ?>
 
 <!DOCTYPE html>
