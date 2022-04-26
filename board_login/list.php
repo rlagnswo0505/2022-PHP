@@ -9,12 +9,7 @@ if (isset($_SESSION["login_user"])) {
     $nm = $login_user["nm"];
 }
 
-$result = sel_board_list();
-// $result_nm = find_name();
-// $name = [];
-// foreach ($result_nm as $row) {
-//     $name += [$row['i_user'] => $row['nm']];
-// }
+$list = sel_board_list();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,30 +55,24 @@ $result = sel_board_list();
         <main>
             <h1>리스트</h1>
             <table>
-                <tr>
-                    <th>번호</th>
-                    <th>제목</th>
-                    <th>작성자명</th>
-                    <th>등록일시</th>
-                </tr>
-                <?php
-                foreach ($result as $row) {
-                    $i_board = $row['i_board'];
-                    $title = $row['title'];
-                    $i_user = $row['i_user'];
-                    $result_nm = find_name($i_user);
-                    $nm = $result_nm['nm'];
-                    //$nm = $name["$i_user"];
-                    $created_at = $row['created_at'];
-
-                    print "<tr>";
-                    print "<td>$i_board</td>";
-                    print "<td><a href='#'>$title</a></td>";
-                    print "<td>$nm</td>";
-                    print "<td>$created_at</td>";
-                    print "</tr>";
-                }
-                ?>
+                <thead>
+                    <tr>
+                        <th>글번호</th>
+                        <th>제목</th>
+                        <th>글쓴이</th>
+                        <th>등록일시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($list as $item) { ?>
+                        <tr>
+                            <td><?= $item["i_board"] ?></td>
+                            <td><a href="detail.php?i_board=<?= $item["i_board"] ?>"><?= $item["title"] ?></a></td>
+                            <td><?= $item["nm"] ?></td>
+                            <td><?= $item["created_at"] ?></td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
             </table>
         </main>
     </div>
