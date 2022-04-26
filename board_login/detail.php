@@ -54,3 +54,15 @@ if (isset($_SESSION["login_user"])) {
 </body>
 
 </html>
+
+<?php
+if (isset($_SESSION["login_user"])) {
+    $login_user = $_SESSION["login_user"];
+    $i_user = $login_user["i_user"];
+}
+$i_user = 0;
+if (isset($_SESSION["login_user"])) {
+    $login_uesr = $_SESSION["login_user"];
+    $i_user = $login_uesr["i_user"];
+}
+?>
