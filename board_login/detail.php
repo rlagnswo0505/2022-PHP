@@ -1,21 +1,24 @@
 <?php
 include_once 'db/db_board.php';
 
-$i_board = $_GET['i_board'];
 
+
+$i_board = $_GET['i_board'];
 $param = [
     "i_board" => $i_board
 ];
 
-$result = sel_board($param);
+$item = sel_board($param);
 
-if ($row = mysqli_fetch_assoc($result)) {
+if ($row = mysqli_fetch_assoc($item)) {
     $title = $row['title'];
     $nm = $row['nm'];
     $created_at = $row['created_at'];
     $ctnt = $row['ctnt'];
     $updated_at = $row['updated_at'];
 }
+session_start();
+$login_user = $_SESSION["login_user"];
 ?>
 
 <!DOCTYPE html>
@@ -29,8 +32,13 @@ if ($row = mysqli_fetch_assoc($result)) {
 </head>
 
 <body>
-    <div><a href="list.php">리스트</a></div>
-    <div></div>
+    <div><a href="list.php"><button>리스트</button></a></div>
+    <?php if ($nm === $login_user['nm']) { ?>
+        <div>
+            <a href="mod.php"><button>수정</button></a>
+            <a href="del.php"><button>삭제</button></a>
+        </div>
+    <?php } ?>
     <div>제목 : <?= $title ?></div>
     <div>글쓴이 : <?= $nm ?></div>
     <div>등록일시 : <?= $created_at ?></div>
