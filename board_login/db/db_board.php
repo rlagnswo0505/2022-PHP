@@ -45,7 +45,7 @@ function sel_board($param)
     $i_board = $param['i_board'];
 
     $conn = get_conn();
-    $sql = "SELECT A.i_board, A.ctnt, A.title, A.created_at, A.updated_at, B.nm
+    $sql = "SELECT A.i_board, A.ctnt, A.title, A.created_at, A.updated_at, B.nm, B.i_user
     FROM t_board A 
     INNER JOIN t_user B 
     ON A.i_user = B.i_user

@@ -13,6 +13,7 @@ $item = sel_board($param);
 if ($row = mysqli_fetch_assoc($item)) {
     $title = $row['title'];
     $nm = $row['nm'];
+    $i_user = $row['i_user'];
     $created_at = $row['created_at'];
     $ctnt = $row['ctnt'];
     $updated_at = $row['updated_at'];
@@ -33,7 +34,7 @@ $login_user = $_SESSION["login_user"];
 
 <body>
     <div><a href="list.php"><button>리스트</button></a></div>
-    <?php if ($nm === $login_user['nm']) { ?>
+    <?php if ($i_user === $login_user['i_user']) { ?>
         <div>
             <a href="mod.php"><button>수정</button></a>
             <a href="del.php"><button>삭제</button></a>

@@ -43,12 +43,12 @@ $list = sel_board_list();
             }
             ?>
             <div>
-                <a href="list.php">리스트</a>
+                <a href="list.php"><button>리스트</button></a>
                 <?php if ($nm !== "") { ?>
-                    <a href="write.php">글쓰기</a>
-                    <a href='logout.php'>로그아웃</a>
+                    <a href="write.php"><button>글쓰기</button></a>
+                    <a href='logout.php'><button>로그아웃</button></a>
                 <?php } else { ?>
-                    <a href='login.php'>로그인</a>
+                    <a href='login.php'><button>로그인</button></a>
                 <?php } ?>
             </div>
         </header>
