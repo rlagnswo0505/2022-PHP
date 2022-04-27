@@ -37,7 +37,7 @@ if (isset($_SESSION["login_user"])) {
     <?php if (isset($_SESSION["login_user"]) && $i_user === $login_user['i_user']) { ?>
         <div>
             <a href="mod.php"><button>수정</button></a>
-            <a href="del.php"><button>삭제</button></a>
+            <button class="del_button">삭제</button>
         </div>
     <?php } ?>
     <div>제목 : <?= $title ?></div>
@@ -49,6 +49,21 @@ if (isset($_SESSION["login_user"])) {
     }
     ?>
     <div> <?= $ctnt ?> </div>
+    <script>
+        const delButton = document.querySelector(".del_button");
+
+        delButton.addEventListener("click", isDel);
+
+        function isDel() {
+            //alert("진짜로 삭제하시겠습니까?"); alert는 확인만 가능
+            //confirm은 확인과 취소가 가능
+            if (confirm("삭제 하시겠습니까?")) {
+                location.href = "del.php?i_board=<?= $i_board ?>";
+            } else {
+                console.log('취소할게요');
+            }
+        }
+    </script>
 </body>
 
 </html>
