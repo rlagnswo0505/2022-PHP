@@ -3,13 +3,24 @@ include_once "db/db_board.php";
 
 session_start();
 $nm = "";
-
+$page = $_GET["page"];
+if (!$page) {
+    $page = 1;
+} else {
+    $page = intval($page);
+}
 if (isset($_SESSION["login_user"])) {
     $login_user = $_SESSION["login_user"];
     $nm = $login_user["nm"];
 }
+$row_count = 15;
+$param = [
+    "row_count" => $row_count,
+    "start_idx" => ($page - 1) * $row_count
+];
 
-$list = sel_board_list();
+$paging_count = sel_paging_count($param);
+$list = sel_board_list($param);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,10 +75,26 @@ $list = sel_board_list();
                         <?php } ?>
                     </tbody>
                 </table>
+                <div class="page-box">
+                    <?php
+                    for ($i = 1; $i <= $paging_count; $i++) { ?>
+                        <span><a href="list.php?page=<?= $i ?>"><button class="btn first"><?= $i ?></button></a></span>
+                    <?php } ?>
+                </div>
             </div>
         </main>
     </div>
+    <script>
+        const tbody = document.querySelector("tbody");
+        const rows = tbody.querySelectorAll("tr");
 
+        function handleRowClick() {
+            location.href = "detail.php?i_board=<?= $item["i_board"] ?>";
+        }
+        for (const row of rows) {
+            row.addEventListener("click", handleRowClick)
+        }
+    </script>
 </body>
 
 </html>

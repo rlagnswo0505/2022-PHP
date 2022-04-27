@@ -10,7 +10,7 @@ body {
 
 #container {
     display: grid;
-    grid-template-rows: 100px, 1fr;
+    grid-template-rows: 50px, 1fr;
     min-height: 100vh;
 }
 #container > header {
@@ -83,4 +83,41 @@ tbody tr:hover {
 tbody td:hover:before {
     content: "";
     background-color: rgba(255, 255, 255, 0.2);
+}
+main .page-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .page-box a {
+    text-decoration: none;
+}
+.btn {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 0.6em;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    margin: 5px;
+    padding: 0.3rem 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+.btn:hover,
+.btn:focus {
+    color: #fff;
+    outline: 0;
+}
+.first {
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.first:hover {
+    box-shadow: 0 0 40px 40px #fff inset;
+    color: #000;
 }

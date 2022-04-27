@@ -2,11 +2,11 @@
 include_once 'db/db_board.php';
 
 session_start();
+$login_user = $_SESSION['login_user'];
+
 $i_board = $_POST['i_board'];
 $title = $_POST['title'];
 $ctnt = $_POST['ctnt'];
-
-$login_user = $_SESSION['login_user'];
 $i_user = $login_user['i_user'];
 
 $param = [
