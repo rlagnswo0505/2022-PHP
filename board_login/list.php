@@ -30,6 +30,12 @@ $list = sel_board_list();
             border: 1px solid #000;
             padding: 5px 20px;
         }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
     <title>리스트</title>
 </head>
@@ -54,27 +60,30 @@ $list = sel_board_list();
             </div>
         </header>
         <main>
-            <h1>리스트</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>글번호</th>
-                        <th>제목</th>
-                        <th>글쓴이</th>
-                        <th>등록일시</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($list as $item) { ?>
+            <div class="table-box">
+                <h1>리스트</h1>
+                <table>
+                    <thead>
                         <tr>
-                            <td><?= $item["i_board"] ?></td>
-                            <td><a href="detail.php?i_board=<?= $item["i_board"] ?>"><?= $item["title"] ?></a></td>
-                            <td><?= $item["nm"] ?></td>
-                            <td><?= $item["created_at"] ?></td>
+                            <th>글번호</th>
+                            <th>제목</th>
+                            <th>글쓴이</th>
+                            <th>등록일시</th>
                         </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($list as $item) { ?>
+                            <tr>
+                                <td><?= $item["i_board"] ?></td>
+                                <td><a href="detail.php?i_board=<?= $item["i_board"] ?>"><?= $item["title"] ?></a></td>
+                                <td><?= $item["nm"] ?></td>
+                                <td><?= $item["created_at"] ?></td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+
+            </div>
         </main>
     </div>
 

@@ -50,9 +50,13 @@ function sel_board($param)
 function del_board(&$param)
 {
     $i_board = $param['i_board'];
+    $i_user = $param['i_user'];
 
     $conn = get_conn();
-    $sql = "DELETE FROM t_board WHERE i_board=$i_board";
+    $sql =
+        "DELETE FROM t_board 
+        WHERE i_board=$i_board 
+        AND i_user = $i_user";
 
     $result = mysqli_query($conn, $sql);
     mysqli_close($conn);
