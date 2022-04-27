@@ -46,3 +46,16 @@ function sel_board($param)
     mysqli_close($conn);
     return $result;
 }
+
+function del_board(&$param)
+{
+    $i_board = $param['i_board'];
+
+    $conn = get_conn();
+    $sql = "DELETE FROM t_board WHERE i_board=$i_board";
+
+    $result = mysqli_query($conn, $sql);
+    mysqli_close($conn);
+
+    return $result;
+}

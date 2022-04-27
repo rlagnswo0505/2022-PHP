@@ -49,6 +49,7 @@ $list = sel_board_list();
                     <a href='logout.php'><button>로그아웃</button></a>
                 <?php } else { ?>
                     <a href='login.php'><button>로그인</button></a>
+                    <a href="join.php"><button>회원가입</button></a>
                 <?php } ?>
             </div>
         </header>
