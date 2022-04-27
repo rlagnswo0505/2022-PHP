@@ -19,59 +19,6 @@ $list = sel_board_list();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="common.css">
-    <style>
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .table-box {
-            transform: translate(-50%, -50%);
-        }
-
-        table {
-            width: 800px;
-            border-collapse: collapse;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-
-        th,
-        td {
-            padding: 15px;
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #fff;
-        }
-
-        th {
-            text-align: left;
-        }
-
-        thead th {
-            background-color: #55608f;
-        }
-
-        tbody tr:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-
-        tbody td {
-            position: relative;
-        }
-
-        tbody td:hover:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: -9999px;
-            bottom: -9999px;
-            background-color: rgba(255, 255, 255, 0.2);
-            z-index: -1;
-        }
-    </style>
     <title>리스트</title>
 </head>
 
@@ -110,14 +57,13 @@ $list = sel_board_list();
                         <?php foreach ($list as $item) { ?>
                             <tr>
                                 <td><?= $item["i_board"] ?></td>
-                                <td><a href="detail.php?i_board=<?= $item["i_board"] ?>"><?= $item["title"] ?></a></td>
+                                <td class="title-link"><a href="detail.php?i_board=<?= $item["i_board"] ?>"><?= $item["title"] ?></a></td>
                                 <td><?= $item["nm"] ?></td>
                                 <td><?= $item["created_at"] ?></td>
                             </tr>
                         <?php } ?>
                     </tbody>
                 </table>
-
             </div>
         </main>
     </div>
