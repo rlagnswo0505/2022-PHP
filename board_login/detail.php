@@ -36,7 +36,7 @@ if (isset($_SESSION["login_user"])) {
     <div><a href="list.php"><button>리스트</button></a></div>
     <?php if (isset($_SESSION["login_user"]) && $i_user === $login_user['i_user']) { ?>
         <div>
-            <a href="mod.php"><button>수정</button></a>
+            <a href="mod.php?i_board=<?= $i_board ?>"><button>수정</button></a>
             <button class="del_button">삭제</button>
         </div>
     <?php } ?>

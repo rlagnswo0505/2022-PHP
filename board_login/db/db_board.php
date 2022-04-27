@@ -31,7 +31,7 @@ function sel_board_list()
 }
 
 
-function sel_board($param)
+function sel_board(&$param)
 {
     $i_board = $param['i_board'];
 
@@ -46,6 +46,24 @@ function sel_board($param)
     mysqli_close($conn);
     return $result;
 }
+
+function sel_board_mod(&$param)
+{
+    $i_board = $param['i_board'];
+    $i_user = $param['i_user'];
+
+    $conn = get_conn();
+    $sql = "SELECT A.i_board, A.ctnt, A.title, B.nm, B.i_user
+    FROM t_board A 
+    INNER JOIN t_user B 
+    ON A.i_user = B.i_user
+    WHERE A.i_board=$i_board AND B.i_user = $i_user";
+
+    $result = mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    return $result;
+}
+
 
 function del_board(&$param)
 {
@@ -63,3 +81,22 @@ function del_board(&$param)
 
     return $result;
 }
+
+function upd_board(&$param)
+{
+    $i_board = $param['i_board'];
+    $i_user = $param['i_user'];
+    $title = $param['title'];
+    $ctnt = $param['ctnt'];
+
+    $conn = get_conn();
+    $sql =
+        "UPDATE t_board A
+        SET title='${title}', ctnt='${ctnt}',updated_at=now() 
+        WHERE i_board=$i_board AND i_user = $i_user";
+
+    $result = mysqli_query($conn, $sql);
+    mysqli_close($conn);
+
+    return $result;
+};
