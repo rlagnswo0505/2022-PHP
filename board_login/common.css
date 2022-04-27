@@ -72,12 +72,12 @@ tbody a {
     color: #fff;
 }
 
-tbody a:hover {
-    color: rgba(231, 0, 255, 1);
-}
-
 tbody tr:hover {
     background-color: rgba(255, 255, 255, 0.3);
+}
+tbody tr:hover td,
+tbody tr:hover td a {
+    color: rgba(231, 0, 255, 1);
 }
 
 tbody td:hover:before {

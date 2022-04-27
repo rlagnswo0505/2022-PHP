@@ -84,17 +84,6 @@ $list = sel_board_list($param);
             </div>
         </main>
     </div>
-    <script>
-        const tbody = document.querySelector("tbody");
-        const rows = tbody.querySelectorAll("tr");
-
-        function handleRowClick() {
-            location.href = "detail.php?i_board=<?= $item["i_board"] ?>";
-        }
-        for (const row of rows) {
-            row.addEventListener("click", handleRowClick)
-        }
-    </script>
 </body>
 
 </html>
