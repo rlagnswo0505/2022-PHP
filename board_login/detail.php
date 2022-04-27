@@ -1,8 +1,6 @@
 <?php
 include_once 'db/db_board.php';
 
-
-
 $i_board = $_GET['i_board'];
 $param = [
     "i_board" => $i_board
