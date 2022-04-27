@@ -30,15 +30,6 @@ function sel_board_list()
     return $result;
 }
 
-// function find_name(&$i_user)
-// {
-//     $conn = get_conn();
-//     $sql = "SELECT nm FROM t_user WHERE i_user=$i_user";
-
-//     $result = mysqli_query($conn, $sql);
-//     mysqli_close($conn);
-//     return mysqli_fetch_assoc($result);
-// }
 
 function sel_board($param)
 {
