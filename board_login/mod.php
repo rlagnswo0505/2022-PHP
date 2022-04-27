@@ -10,7 +10,7 @@ $param = [
     "i_user" => $i_user
 ];
 
-$result = sel_board_mod($param);
+$result = sel_board($param);
 if ($row = mysqli_fetch_assoc($result)) {
     $title = $row['title'];
     $ctnt = $row['ctnt'];
