@@ -92,6 +92,7 @@ main .page-box {
 main .page-box a {
     text-decoration: none;
 }
+
 .btn {
     box-sizing: border-box;
     appearance: none;
@@ -99,7 +100,6 @@ main .page-box a {
     border: 2px solid #fff;
     border-radius: 0.6em;
     color: #fff;
-    cursor: pointer;
     display: flex;
     margin: 5px;
     padding: 0.3rem 0.5rem;
@@ -108,6 +108,10 @@ main .page-box a {
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
+}
+.btnSelected {
+    font-weight: bold;
+    background-color: tomato;
 }
 .btn:hover,
 .btn:focus {

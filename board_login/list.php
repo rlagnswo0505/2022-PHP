@@ -3,17 +3,21 @@ include_once "db/db_board.php";
 
 session_start();
 $nm = "";
-$page = $_GET["page"];
-if (!$page) {
-    $page = 1;
-} else {
-    $page = intval($page);
+$page = 1;
+
+if (isset($_GET["page"])) {
+    $page = intval($_GET["page"]);
 }
+
 if (isset($_SESSION["login_user"])) {
     $login_user = $_SESSION["login_user"];
     $nm = $login_user["nm"];
 }
-$row_count = 15;
+// $count = $_POST['ct_board'];
+// print "$count";
+
+$row_count = 20;
+
 $param = [
     "row_count" => $row_count,
     "start_idx" => ($page - 1) * $row_count
@@ -55,6 +59,14 @@ $list = sel_board_list($param);
         <main>
             <div class="table-box">
                 <h1>리스트</h1>
+                <!-- <form action="list.php?page=<?= $page ?>" method="post">
+                    <select name="ct_board" id="">
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                    <input type="submit" value="테이블">
+                </form> -->
                 <table>
                     <thead>
                         <tr>
@@ -78,7 +90,7 @@ $list = sel_board_list($param);
                 <div class="page-box">
                     <?php
                     for ($i = 1; $i <= $paging_count; $i++) { ?>
-                        <span><a href="list.php?page=<?= $i ?>"><button class="btn first"><?= $i ?></button></a></span>
+                        <span><a href="list.php?page=<?= $i ?>"><button class="btn first <?= $i === $page ? "btnSelected" : "" ?>"><?= $i ?></button></a></span>
                     <?php } ?>
                 </div>
             </div>
