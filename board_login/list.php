@@ -66,9 +66,9 @@ $list = sel_board_list($param);
                     </thead>
                     <tbody>
                         <?php foreach ($list as $item) { ?>
-                            <tr>
-                                <td><?= $item["i_board"] ?></td>
-                                <td class="title-link"><a href="detail.php?i_board=<?= $item["i_board"] ?>"><?= $item["title"] ?></a></td>
+                            <tr class="row">
+                                <td class="board-idx"><?= $item["i_board"] ?></td>
+                                <td class="title-link"><?= $item["title"] ?></td>
                                 <td><?= $item["nm"] ?></td>
                                 <td><?= $item["created_at"] ?></td>
                             </tr>
@@ -84,6 +84,19 @@ $list = sel_board_list($param);
             </div>
         </main>
     </div>
+    <script>
+        const rows = document.querySelectorAll(".row");
+
+        for (const row of rows) {
+            const i_board = row.querySelector(".board-idx").innerHTML;
+
+            function handleRowClick() {
+                location.href = `detail.php?i_board=${i_board}`;
+            }
+            row.addEventListener("click", handleRowClick);
+
+        }
+    </script>
 </body>
 
 </html>

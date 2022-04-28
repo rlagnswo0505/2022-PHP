@@ -20,6 +20,10 @@ session_start();
 if (isset($_SESSION["login_user"])) {
     $login_user = $_SESSION["login_user"];
 }
+
+$next = sel_next_board($param);
+$prev = sel_prev_board($param);
+
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +37,6 @@ if (isset($_SESSION["login_user"])) {
 </head>
 
 <body>
-    <div><a href="list.php"><button>리스트</button></a></div>
     <?php if (isset($_SESSION["login_user"]) && $i_user === $login_user['i_user']) { ?>
         <div>
             <a href="mod.php?i_board=<?= $i_board ?>"><button>수정</button></a>
@@ -49,6 +52,15 @@ if (isset($_SESSION["login_user"])) {
     }
     ?>
     <div> <?= $ctnt ?> </div>
+    <div>
+        <a href="list.php"><button>리스트</button></a>
+        <?php if ($next !== 0) { ?>
+            <a href="detail.php?i_board=<?= $next ?>"><button>다음글🔺</button></a>
+        <?php }
+        if ($prev !== 0) { ?>
+            <a href="detail.php?i_board=<?= $prev ?>"><button>이전글🔻</button></a>
+        <?php } ?>
+    </div>
     <script>
         const delButton = document.querySelector(".del_button");
 

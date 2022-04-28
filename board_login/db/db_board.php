@@ -62,6 +62,45 @@ function sel_board_list(&$param)
     mysqli_close($conn);
     return $result;
 }
+// 최신글
+function sel_next_board(&$param)
+{
+    $i_board = $param['i_board'];
+
+    $conn = get_conn();
+    $sql = "SELECT i_board 
+            FROM t_board 
+            WHERE i_board > $i_board
+            ORDER BY i_board 
+            LIMIT 1";
+
+    $result = mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    $row = mysqli_fetch_assoc($result);
+    if ($row) {
+        return $row["i_board"];
+    }
+    return 0;
+}
+// 이전글
+function sel_prev_board(&$param)
+{
+    $i_board = $param['i_board'];
+
+    $conn = get_conn();
+    $sql = "SELECT i_board FROM t_board 
+            WHERE i_board < $i_board
+            ORDER BY i_board DESC 
+            LIMIT 1";
+
+    $result = mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    $row = mysqli_fetch_assoc($result);
+    if ($row) {
+        return $row["i_board"];
+    }
+    return 0;
+}
 function upd_board(&$param)
 {
     $i_board = $param['i_board'];
