@@ -57,6 +57,7 @@ if (isset($_SESSION["login_user"])) {
         function isDel() {
             //alert("진짜로 삭제하시겠습니까?"); alert는 확인만 가능
             //confirm은 확인과 취소가 가능
+            console.log("isDel 실행 됨!!");
             if (confirm("삭제 하시겠습니까?")) {
                 location.href = "del.php?i_board=<?= $i_board ?>";
             } else {
