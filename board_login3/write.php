@@ -10,6 +10,19 @@
 
 <body>
     <h1>글쓰기</h1>
+    <a href="list.php"><button>리스트</button></a>
+    <form action="write_proc" method="post">
+        <div>
+            <input type="text" name="title" placeholder="제목" id="">
+        </div>
+        <div>
+            <textarea name="ctnt" id="" placeholder="내용" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="글쓰기">
+            <input type="reset" value="초기화">
+        </div>
+    </form>
 </body>
 
 </html>
