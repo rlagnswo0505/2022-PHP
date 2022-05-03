@@ -11,7 +11,7 @@
 <body>
     <h1>글쓰기</h1>
     <a href="list.php"><button>리스트</button></a>
-    <form action="write_proc" method="post">
+    <form action="write_proc.php" method="post">
         <div>
             <input type="text" name="title" placeholder="제목" id="">
         </div>
