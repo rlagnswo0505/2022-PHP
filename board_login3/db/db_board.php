@@ -18,7 +18,10 @@ function ins_board(&$param)
 function sel_board_list()
 {
     $conn = get_conn();
-    $sql = "";
+    $sql = "SELECT A.i_board, A.title, B.nm, A.created_at  FROM t_board A 
+    INNER JOIN t_user B
+    ON A.i_user = B.i_user
+    ORDER BY A.i_board DESC";
 
     $result = mysqli_query($conn, $sql);
     mysqli_close($conn);
