@@ -2,6 +2,7 @@
 include_once "db/db_board.php";
 
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,10 +19,16 @@ include_once "db/db_board.php";
         <table>
             <thead>
                 <th>글번호</th>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>등록일시</th>
             </thead>
+            <tbody>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tbody>
         </table>
     </div>
 </body>
