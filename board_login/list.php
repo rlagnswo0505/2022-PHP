@@ -50,6 +50,7 @@ $list = sel_board_list($param);
                 <?php if ($nm !== "") { ?>
                     <a href="write.php"><button>글쓰기</button></a>
                     <a href='logout.php'><button>로그아웃</button></a>
+                    <a href="profile.php"><button>프로필</button> </a>
                 <?php } else { ?>
                     <a href='login.php'><button>로그인</button></a>
                     <a href="join.php"><button>회원가입</button></a>
