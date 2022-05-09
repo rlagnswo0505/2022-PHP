@@ -45,6 +45,8 @@ if ($imageUpload) { //업로드 성공!
         "profile_img" => $target_filenm,
         "i_user" => $login_user['i_user']
     ];
+    $result = upd_profile_img($param);
+
     Header("Location: profile.php");
 } else { //업로드 실패!
     echo "업로드 실패";
