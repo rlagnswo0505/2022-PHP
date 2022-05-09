@@ -32,3 +32,16 @@ function sel_user(&$param)
 
     return mysqli_fetch_assoc($result);
 }
+
+// 
+function upd_profile_img(&$param)
+{
+    $sql = "UPDATE t_user 
+    SET profile_img = '{$param["profile_img"]}'
+    WHERE i_user = {$param["i_user"]}";
+    $conn = get_conn();
+    $result = mysqli_query($conn, $sql);
+    mysqli_close($conn);
+
+    return $result;
+}
