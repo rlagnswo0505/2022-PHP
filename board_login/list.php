@@ -45,12 +45,20 @@ $list = sel_board_list($param);
                 print "<div>${nm}님 환영합니다. </div>";
             }
             ?>
-            <div>
+            <div class="profile-box">
                 <a href="list.php"><button>리스트</button></a>
                 <?php if ($nm !== "") { ?>
                     <a href="write.php"><button>글쓰기</button></a>
                     <a href='logout.php'><button>로그아웃</button></a>
-                    <a href="profile.php"><button>프로필</button> </a>
+                    <a href="profile.php" class="profile-button">프로필
+                        <?php
+                        $session_img = $_SESSION["login_user"]["profile_img"];
+                        $profile_img = $session_img == null ? "basic.jpg" : $_SESSION["login_user"]["i_user"] . "/" . $session_img;
+                        ?>
+                        <div class="circular__img wh40">
+                            <img src="/board_login/img/profile/<?= $profile_img ?>" alt="">
+                        </div>
+                    </a>
                 <?php } else { ?>
                     <a href='login.php'><button>로그인</button></a>
                     <a href="join.php"><button>회원가입</button></a>
@@ -82,7 +90,16 @@ $list = sel_board_list($param);
                             <tr class="row">
                                 <td class="board-idx"><?= $item["i_board"] ?></td>
                                 <td class="title-link"><?= $item["title"] ?></td>
-                                <td><?= $item["nm"] ?></td>
+                                <td><?= $item["nm"] ?>
+                                    <?php
+                                    if (!$item["profile_img"]) {
+                                        $item["profile_img"] = "../basic.jpg";
+                                    }
+                                    ?>
+                                    <div class="circular__img wh40">
+                                        <img src="/board_login/img/profile/<?= $item["i_user"] ?>/<?= $item["profile_img"] ?>" alt="">
+                                    </div>
+                                </td>
                                 <td><?= $item["created_at"] ?></td>
                             </tr>
                         <?php } ?>

@@ -51,7 +51,7 @@ function sel_board_list(&$param)
 
     $conn = get_conn();
     $sql =
-        "SELECT A.i_board, A.title, A.created_at, B.nm
+        "SELECT A.i_board, A.title, A.created_at, B.nm, B.profile_img, B.i_user
         FROM t_board A 
         INNER JOIN t_user B 
         ON A.i_user = B.i_user 
