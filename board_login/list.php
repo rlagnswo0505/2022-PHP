@@ -97,7 +97,7 @@ $list = sel_board_list($param);
                                     }
                                     ?>
                                     <div class="circular__img wh40">
-                                        <img src="/board_login/img/profile/<?= $item["i_user"] ?>/<?= $item["profile_img"] ?>" alt="">
+                                        <img src="/board_login/img/profile/<?= $item["i_user"] . "/" . $item["profile_img"] ?>" alt="">
                                     </div>
                                 </td>
                                 <td><?= $item["created_at"] ?></td>
