@@ -13,5 +13,6 @@
   }
 
   $obj = new Student;
+  // $obj->studentId = 111;
   $obj->printStudent(12212, "홍길동");
   

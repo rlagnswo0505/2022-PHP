@@ -30,6 +30,7 @@ class Student extends People{
     parent::printPeople();
     print "Id : {$this->studentId}<br>";
   }
+  // Override 오버라이딩 : 부모에 있는 함수를 같은 이름으로 다른 일을 하는 메소드를 만드는거
   function printPeople(){
     print "Student에 있는 printPeople<br>";
   }

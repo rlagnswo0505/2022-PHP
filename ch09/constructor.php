@@ -7,7 +7,7 @@
     private $price;
 
     // 생성자 함수
-    function __construct($name,$price,$color){
+    function __construct($name=null,$price=null,$color=null){
       $this->name = $name;
       $this->color = $color;
       $this->price = $price;

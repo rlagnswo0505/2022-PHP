@@ -33,5 +33,7 @@ class Fruit{
 $apple1 = (new Fruit)->setName("apple");
 $apple1->print_fruit();
 
-$apple2 = (new Fruit)->setColor("파란")->setPrice(1000);
+$apple2 = (new Fruit)
+  ->setColor("파란")
+  ->setPrice(1000);
 $apple2->print_fruit();
