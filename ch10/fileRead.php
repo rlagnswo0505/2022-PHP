@@ -5,4 +5,8 @@
   }
   print "파일을 열었습니다.<br>";
 
+  while($line = fgets($filep,100)){
+    print $line. "<br>";
+  }
+
   fclose($filep);
