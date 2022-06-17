@@ -1,0 +1,42 @@
+*{
+  font-size: 9pt;
+  font-family: "굴림";
+}
+a {
+  text-decoration: none
+};
+
+
+a:link {
+  color:#1a1f7a;
+}
+a:visited {
+  color: tomato;
+}
+a:hover {
+  color: #a12ba0;
+  text-decoration: underline;
+}
+a:active {
+  color: #ff4e02;
+  text-decoration: underline;
+}
+
+
+td {
+  line-height: 15px;
+}
+th{
+  font-weight: bold;
+  color: white;
+}
+small {
+  line-height: 18px;
+}
+strong {
+  font-size: 10pt;
+  line-height: 18px;
+}
+ul {
+  line-height: 16px;
+}
