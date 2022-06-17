@@ -14,9 +14,8 @@
       ");
     }else { //일반 회원인 경우
       echo("
-      <a href='my_buy.php'>상품입력</a>
-      <a href='update_member.php'>구매관리</a>
+      <a href='my_buy.php'>구매관리</a>
+      <a href='update_member.php'>내정보수정</a>
     ");
     }
-    echo("<a href='logout.php'>로그아웃</a>");
   };
