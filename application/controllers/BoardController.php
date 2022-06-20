@@ -1,10 +1,17 @@
 <?php
-use application\controllers\Controller;
+// 네임스페이스 : 태그같은 느낌이다
+namespace application\controllers;
+// 같은 네임스페이스면 use를 안써줘도 된다.
+
+use application\models\BoardModel;
 
 class BoardController extends Controller
 {
     public function list()
     {
-        return ''; //view
+        $model = new BoardModel();
+        // $this->$list = $model->selBoardList();
+        $this->addAttribute('list', $model->selBoardList());
+        return 'board/list.php'; //view 파일명
     }
 }
