@@ -31,10 +31,9 @@ class BoardController extends Controller
     }
     public function delete()
     {
-        $i_board = $_GET['i_board'];
+        $param = ['i_board' => $_GET['i_board']];
         $model = new BoardModel();
-        $param = ['i_board' => $i_board];
-        $this->addAttribute('data', $model->delBoard($param));
+        $model->delBoard($param);
         return 'redirect:/board/list';
     }
 }
