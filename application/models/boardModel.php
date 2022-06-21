@@ -23,6 +23,7 @@ class BoardModel extends Model
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(':i_board', $param['i_board']);
         $stmt->execute();
+        // 그냥 fetch로 쓰면 인덱스와 키값을 모두 사용 할 수 있는 배열을 가져온다
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
 }

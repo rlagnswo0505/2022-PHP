@@ -24,6 +24,7 @@ class BoardController extends Controller
         // print "i_board : {$i_board}<br>";
         $param = ['i_board' => $i_board];
         $this->addAttribute('data', $model->selBoard($param));
+        $this->addAttribute('js', ['board/detail']);
         return 'board/detail.php';
 
         // 글번호, 제목, 내용, 글쓴이 이름, 작성일
