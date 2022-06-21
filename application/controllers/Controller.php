@@ -5,6 +5,7 @@ abstract class Controller
 {
     public function __construct($action)
     {
+        // php는 생성자 함수에서 문자열로 호출가능
         $view = $this->$action();
         require_once $this->getView($view);
     }
