@@ -26,4 +26,11 @@ class BoardModel extends Model
         // 그냥 fetch로 쓰면 인덱스와 키값을 모두 사용 할 수 있는 배열을 가져온다
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
+    public function delBoard(&$param)
+    {
+        $sql = 'DELETE FROM t_board WHERE i_board = :i_board';
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':i_board', $param['i_board']);
+        $stmt->execute();
+    }
 }

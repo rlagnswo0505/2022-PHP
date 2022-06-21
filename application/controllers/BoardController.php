@@ -29,4 +29,12 @@ class BoardController extends Controller
 
         // 글번호, 제목, 내용, 글쓴이 이름, 작성일
     }
+    public function delete()
+    {
+        $i_board = $_GET['i_board'];
+        $model = new BoardModel();
+        $param = ['i_board' => $i_board];
+        $this->addAttribute('data', $model->delBoard($param));
+        return 'redirect:/board/list';
+    }
 }
