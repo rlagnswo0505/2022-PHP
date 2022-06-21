@@ -7,7 +7,7 @@
 
     trList.forEach((tr) => {
         tr.addEventListener('click', () => {
-            location.href = `detail.php?i_board=${tr.dataset.i_board}`;
+            location.href = `detail?i_board=${tr.dataset.i_board}`;
         });
     });
 })();

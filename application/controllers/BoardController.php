@@ -14,6 +14,18 @@ class BoardController extends Controller
         $this->addAttribute('title', '리스트');
         $this->addAttribute('list', $model->selBoardList());
         $this->addAttribute('js', ['board/list']);
+        $this->addAttribute('css', ['board/list']);
         return 'board/list.php'; //view 파일명
+    }
+    public function detail()
+    {
+        $i_board = $_GET['i_board'];
+        $model = new BoardModel();
+        // print "i_board : {$i_board}<br>";
+        $param = ['i_board' => $i_board];
+        $this->addAttribute('data', $model->selBoard($param));
+        return 'board/detail.php';
+
+        // 글번호, 제목, 내용, 글쓴이 이름, 작성일
     }
 }
