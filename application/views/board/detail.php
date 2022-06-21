@@ -9,7 +9,10 @@
 아니요시 아무일 
 주소는 del?i_board=114
 -->
-    <div><button id="btnDel" data-i_board="<?= $this->data->i_board ?>">삭제</button></div>
+    <div>
+      <button id="btnDel" data-i_board="<?= $this->data->i_board ?>">삭제</button>
+      <button id="btnMod" data-i_board="<?= $this->data->i_board ?>">수정</button>
+    </div>
     <div>글번호 : <?= $this->data->i_board ?></div>
     <div>제목 : <?= $this->data->title ?></div>
     <div>내용 : <?= $this->data->ctnt ?></div>

@@ -21,7 +21,6 @@ class BoardController extends Controller
     {
         $i_board = $_GET['i_board'];
         $model = new BoardModel();
-        // print "i_board : {$i_board}<br>";
         $param = ['i_board' => $i_board];
         $this->addAttribute('data', $model->selBoard($param));
         $this->addAttribute('js', ['board/detail']);
@@ -35,5 +34,16 @@ class BoardController extends Controller
         $model = new BoardModel();
         $model->delBoard($param);
         return 'redirect:/board/list';
+    }
+    public function mod()
+    {
+        $model = new BoardModel();
+        $param = ['i_board' => $_GET['i_board']];
+        $this->addAttribute('data', $model->selBoard($param));
+
+        $this->addAttribute(_HEADER, $this->getView('template/header.php'));
+        $this->addAttribute(_MAIN, $this->getView('board/mod.php'));
+        $this->addAttribute(_FOOTER, $this->getView('template/footer.php'));
+        return 'template/t1.php';
     }
 }
