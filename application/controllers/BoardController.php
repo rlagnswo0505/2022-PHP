@@ -7,14 +7,15 @@ use application\models\BoardModel;
 
 class BoardController extends Controller
 {
+    // 각각의 메소드는 열어야 되는 파일명[위치포함] 또는 redirect:[주소이동] 문자열이 필요하다
     public function list()
     {
         $model = new BoardModel();
         // $this->$list = $model->selBoardList();
         $this->addAttribute('title', '리스트');
         $this->addAttribute('list', $model->selBoardList());
-        $this->addAttribute('js', ['board/list']);
-        $this->addAttribute('css', ['board/list']);
+        $this->addAttribute(_JS, ['board/list']);
+        $this->addAttribute(_CSS, ['board/list']);
         return 'board/list.php'; //view 파일명
     }
     public function detail()
@@ -23,7 +24,7 @@ class BoardController extends Controller
         $model = new BoardModel();
         $param = ['i_board' => $i_board];
         $this->addAttribute('data', $model->selBoard($param));
-        $this->addAttribute('js', ['board/detail']);
+        $this->addAttribute(_JS, ['board/detail']);
         return 'board/detail.php';
 
         // 글번호, 제목, 내용, 글쓴이 이름, 작성일
@@ -40,7 +41,7 @@ class BoardController extends Controller
         $model = new BoardModel();
         $param = ['i_board' => $_GET['i_board']];
         $this->addAttribute('data', $model->selBoard($param));
-
+        $this->addAttribute(_TITLE, '수정');
         $this->addAttribute(_HEADER, $this->getView('template/header.php'));
         $this->addAttribute(_MAIN, $this->getView('board/mod.php'));
         $this->addAttribute(_FOOTER, $this->getView('template/footer.php'));
