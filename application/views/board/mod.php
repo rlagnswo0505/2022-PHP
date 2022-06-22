@@ -1,6 +1,6 @@
 <div>
 <h1>수정</h1>
-<form action="modProc.php" method="post">
+<form action="modProc" method="post">
   <input type="hidden" name="i_board" value="<?= $this->data->i_board ?>">
   <div>제목: <input type="text" name="title" id="" value="<?= $this->data->title ?>"></div>
   <div>내용: <textarea name="ctnt" id="" cols="30" rows="10"><?= $this->data

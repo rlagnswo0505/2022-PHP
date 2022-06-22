@@ -18,5 +18,6 @@
     <div>내용 : <?= $this->data->ctnt ?></div>
     <div>글쓴이 : <?= $this->data->nm ?></div>
     <div>등록일시 : <?= $this->data->created_at ?></div>
+    <div>수정일시 : <?= $this->data->updated_at ?></div>
 </body>
 </html>

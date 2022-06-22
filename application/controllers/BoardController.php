@@ -47,4 +47,16 @@ class BoardController extends Controller
         $this->addAttribute(_FOOTER, $this->getView('template/footer.php'));
         return 'template/t1.php';
     }
+
+    public function modProc()
+    {
+        $param = [
+            'i_board' => $_POST['i_board'],
+            'title' => $_POST['title'],
+            'ctnt' => $_POST['ctnt'],
+        ];
+        $model = new BoardModel();
+        $model->updBoard($param);
+        return 'redirect:/board/detail?i_board=' . $param['i_board'];
+    }
 }
