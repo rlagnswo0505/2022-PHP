@@ -30,5 +30,33 @@ class UserController extends Controller
     }
     public function login()
     {
+        $this->addAttribute(_TITLE, '로그인');
+        $this->addAttribute(_HEADER, $this->getView('template/header.php'));
+        $this->addAttribute(_MAIN, $this->getView('user/login.php'));
+        $this->addAttribute(_FOOTER, $this->getView('template/footer.php'));
+        return 'template/t1.php';
+    }
+    public function loginProc()
+    {
+        $param = [
+            'uid' => $_POST['uid'],
+            'upw' => $_POST['upw'],
+        ];
+        $model = new UserModel();
+        $dbUser = $model->selUser($param);
+        if ($dbUser === false) {
+            print '아이디 다름 <br>';
+            return $this->login();
+        } elseif (!password_verify($param['upw'], $dbUser->upw)) {
+            print '비밀번호 다름 <br>';
+            return $this->login();
+        }
+        flash('loginUser', $dbUser);
+        return 'redirect:/board/list';
+    }
+    public function logout()
+    {
+        flash(_LOGINUSER);
+        return 'redirect:/board/list';
     }
 }

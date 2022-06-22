@@ -1,3 +1,10 @@
+body {
+    background-image: linear-gradient(to right bottom, #6c4aa3, #946eb8, #b895ce, #dbbde6, #fbe8ff);
+    color: #fff;
+}
+a {
+    color #fff;
+}
 tbody tr {
     cursor: pointer;
 }
@@ -5,4 +12,20 @@ tbody tr {
 tbody tr:hover {
     background-color: tomato;
     color: white;
+}
+
+tbody tr td {
+    padding: 5px;
+}
+.greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
