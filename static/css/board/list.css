@@ -2,15 +2,16 @@ body {
     background-image: linear-gradient(to right bottom, #6c4aa3, #946eb8, #b895ce, #dbbde6, #fbe8ff);
     color: #fff;
 }
-a {
-    color #fff;
+header a {
+    color: #fff;
+    text-decoration: none;
 }
 tbody tr {
     cursor: pointer;
 }
 
 tbody tr:hover {
-    background-color: tomato;
+    background-color: #0081cf;
     color: white;
 }
 

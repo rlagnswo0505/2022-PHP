@@ -8,6 +8,27 @@ use application\models\BoardModel;
 class BoardController extends Controller
 {
     // 각각의 메소드는 열어야 되는 파일명[위치포함] 또는 redirect:[주소이동] 문자열이 필요하다
+    public function write()
+    {
+        $model = new BoardModel();
+        $this->addAttribute('title', '글쓰기');
+        $this->addAttribute(_HEADER, $this->getView('template/header.php'));
+        $this->addAttribute(_MAIN, $this->getView('board/write.php'));
+        $this->addAttribute(_FOOTER, $this->getView('template/footer.php'));
+        return 'template/t1.php';
+    }
+    public function writeProc()
+    {
+        $login_user = $_SESSION[_LOGINUSER];
+        $param = [
+            'title' => $_POST['title'],
+            'ctnt' => $_POST['ctnt'],
+            'i_user' => $login_user->i_user,
+        ];
+        $model = new BoardModel();
+        $model->insBoard($param);
+        return 'redirect:/board/list';
+    }
     public function list()
     {
         $model = new BoardModel();
@@ -28,7 +49,10 @@ class BoardController extends Controller
         $param = ['i_board' => $i_board];
         $this->addAttribute('data', $model->selBoard($param));
         $this->addAttribute(_JS, ['board/detail']);
-        return 'board/detail.php';
+        $this->addAttribute(_HEADER, $this->getView('template/header.php'));
+        $this->addAttribute(_MAIN, $this->getView('board/detail.php'));
+        $this->addAttribute(_FOOTER, $this->getView('template/footer.php'));
+        return 'template/t1.php';
 
         // 글번호, 제목, 내용, 글쓴이 이름, 작성일
     }

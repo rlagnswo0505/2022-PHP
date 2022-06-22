@@ -4,10 +4,22 @@ use PDO;
 
 class BoardModel extends Model
 {
+    public function insBoard(&$param)
+    {
+        $sql = 'INSERT INTO t_board (title, ctnt, i_user) values (:title,:ctnt, :i_user)';
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':title', $param['title']);
+        $stmt->bindValue(':ctnt', $param['ctnt']);
+        $stmt->bindValue(':i_user', $param['i_user']);
+        $stmt->execute();
+    }
+
     public function selBoardList()
     {
-        $sql = "SELECT i_board, title, created_at 
-                FROM t_board
+        $sql = "SELECT A.i_board, A.title, A.created_at, B.nm 
+                FROM t_board A
+                INNER JOIN t_user B
+                ON A.i_user = B.i_user
                 ORDER BY i_board DESC";
         // 문자열에 홑따옴표, 숫자에 홑따옴표 빼기 stmt 에서 prepare를 사용하면 가능
         $stmt = $this->pdo->prepare($sql);
