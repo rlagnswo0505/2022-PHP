@@ -6,22 +6,39 @@ header a {
     color: #fff;
     text-decoration: none;
 }
+header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.greeting {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+header nav {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+header nav a {
+    margin-left: 10px;
+}
+
 tbody tr {
     cursor: pointer;
 }
 
 tbody tr:hover {
-    background-color: #0081cf;
+    background-color: #d65db1;
     color: white;
 }
 
 tbody tr td {
     padding: 5px;
-}
-.greeting {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 main {
