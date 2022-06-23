@@ -73,7 +73,7 @@ class BoardController extends Controller
         $this->addAttribute(_FOOTER, $this->getView('template/footer.php'));
         return 'template/t1.php';
     }
-
+    // 주석추가
     public function modProc()
     {
         $param = [
