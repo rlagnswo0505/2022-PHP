@@ -51,7 +51,7 @@ class UserController extends Controller
             print '비밀번호 다름 <br>';
             return $this->login();
         }
-        flash('loginUser', $dbUser);
+        flash(_LOGINUSER, $dbUser);
         return 'redirect:/board/list';
     }
     public function logout()
