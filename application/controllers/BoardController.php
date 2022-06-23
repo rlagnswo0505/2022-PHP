@@ -10,7 +10,6 @@ class BoardController extends Controller
     // 각각의 메소드는 열어야 되는 파일명[위치포함] 또는 redirect:[주소이동] 문자열이 필요하다
     public function write()
     {
-        $model = new BoardModel();
         $this->addAttribute('title', '글쓰기');
         $this->addAttribute(_HEADER, $this->getView('template/header.php'));
         $this->addAttribute(_MAIN, $this->getView('board/write.php'));
