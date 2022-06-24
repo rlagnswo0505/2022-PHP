@@ -1,4 +1,5 @@
 <?php
+// 자동으로 인클루드 해주는 곳
 spl_autoload_register(function ($path) {
     $path = str_replace('\\', '/', $path);
     $paths = explode('/', $path);
