@@ -1,4 +1,4 @@
-# PHP_MVC
+# PHP_MVC.
 
 .htaccess 파일 생성
 
